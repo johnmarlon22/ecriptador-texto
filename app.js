@@ -8,7 +8,7 @@ function processText(mode) {
         result = decryptText(inputText);
     }
 
-    document.getElementById("result").innerText = result;
+    document.getElementById("result").value = result;
 }
 
 function encryptText(text) {
@@ -62,4 +62,12 @@ function decryptText(text) {
         }
     }
     return decryptedText;
+}
+
+function copyText() {
+    var resultText = document.getElementById("result");
+    resultText.select();
+    resultText.setSelectionRange(0, 99999); // Para móviles
+    document.execCommand("copy");
+    alert("Texto copiado: " + resultText.value);
 }
