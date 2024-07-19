@@ -1,25 +1,89 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    color: #444;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 textarea {
     width: 80%;
     height: 100px;
-    margin: 10px;
-    padding: 5px;
+    margin: 10px auto;
+    padding: 10px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+    outline: none;
 }
 
 button {
     margin: 10px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #004494;
+    transform: translateY(0);
 }
 
 #result {
+    width: 80%;
+    height: 100px;
+    margin: 10px auto;
+    padding: 10px;
     font-size: 18px;
-    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#result:focus {
+    border-color: #28a745;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.4);
+    outline: none;
+}
+
+label {
+    font-size: 1.2em;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    textarea, #result {
+        width: 95%;
+    }
+
+    button {
+        width: 95%;
+        padding: 10px;
+    }
 }
