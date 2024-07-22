@@ -1,3 +1,4 @@
+// Funcion pricipal para la logica de la aplicacion
 function processText(mode) {
     var inputText = document.getElementById("text").value.toLowerCase();
     var result = "";
@@ -11,6 +12,7 @@ function processText(mode) {
     document.getElementById("result").value = result;
 }
 
+// Realizo la logica para encriptar el texto
 function encryptText(text) {
     var encryptedText = "";
     for (var i = 0; i < text.length; i++) {
@@ -37,6 +39,7 @@ function encryptText(text) {
     return encryptedText;
 }
 
+// Realizo la logica para desencriptar el texto
 function decryptText(text) {
     var decryptedText = "";
     var i = 0;
@@ -64,10 +67,11 @@ function decryptText(text) {
     return decryptedText;
 }
 
+// Funcion que me pertmite copiar el texto
 function copyText() {
     var resultText = document.getElementById("result");
     resultText.select();
-    resultText.setSelectionRange(0, 99999); // Para móviles
+    resultText.setSelectionRange(0, 99999);
     document.execCommand("copy");
     alert("Texto copiado: " + resultText.value);
 }
