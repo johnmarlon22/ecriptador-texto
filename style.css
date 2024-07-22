@@ -43,3 +43,8 @@ textarea:focus {
     box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
     outline: none;
 }
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
